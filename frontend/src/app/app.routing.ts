@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AppRoutes } from './shared/routes/app.routes';
+import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
 const appRoutes = AppRoutes.generateRoutes();
 
@@ -25,6 +26,14 @@ const routes: Routes = [
   {
     path: appRoutes.public.name,
     loadChildren: './public/public.module#PublicModule'
+  },
+  {
+    path: appRoutes.private.name,
+    loadChildren: './private/private.module#PrivateModule'
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
   }
 ];
 

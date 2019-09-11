@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgMaterial } from './modules/ng-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -22,9 +23,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NgMaterial,
         FormsModule,
         ReactiveFormsModule,
+        NotFoundComponent
     ],
     declarations: [
-
+        NotFoundComponent
     ]
 })
 export class SharedModule { }
